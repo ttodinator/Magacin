@@ -32,6 +32,8 @@ public class Magacin implements MagacinInterface{
 		for (int i = 0; i < listaArtikala.size(); i++) {
 			if(listaArtikala.get(i).getSifra() ==sifraArtikla) {
 				listaArtikala.get(i).toString();
+				
+				
 			}
 		}
 	}
