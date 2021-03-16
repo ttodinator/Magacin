@@ -11,6 +11,9 @@ public class KucnaHemija extends Artikal{
 	}
 
 	public void setRokTrajanja(GregorianCalendar rokTrajanja) {
+		if(rokTrajanja==null) {
+			throw new RuntimeException("Datum ne sme da bude null");
+		}
 		this.rokTrajanja = rokTrajanja;
 	}
 

@@ -10,24 +10,36 @@ public class Artikal {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv==null || naziv.length()<2){
+			throw new RuntimeException("Naziv ne sme da bude null i kraci od 2 slova");
+		}
 		this.naziv = naziv;
 	}
 	public int getSifra() {
 		return sifra;
 	}
 	public void setSifra(int sifra) {
+		if(sifra==0) {
+			throw new RuntimeException("Sifra ne sme biti 0");
+		}
 		this.sifra = sifra;
 	}
 	public String getOpis() {
 		return opis;
 	}
 	public void setOpis(String opis) {
+		if(opis==null || opis.length()<5) {
+			throw new RuntimeException("Opis ne sme biti null ili kraci od 5 slova");
+		}
 		this.opis = opis;
 	}
 	public int getKolicina() {
 		return kolicina;
 	}
 	public void setKolicina(int kolicina) {
+		if(kolicina==0) {
+			throw new RuntimeException("Kolicina ne sme da bude 0");
+		}
 		this.kolicina = kolicina;
 	}
 	@Override
