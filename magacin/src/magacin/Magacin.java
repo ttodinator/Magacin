@@ -11,7 +11,8 @@ public class Magacin implements MagacinInterface{
 	@Override
 	public void dodajArtikal(Artikal artikal) {
 		if(artikal==null) {
-			throw new NullPointerException("Artikal ne sme da bude null");
+
+			throw new RuntimeException("Artikal ne sme da bude null");
 		}
 		listaArtikala.add(artikal);
 	}
@@ -19,7 +20,9 @@ public class Magacin implements MagacinInterface{
 	@Override
 	public void izbaciArtikal(Artikal artikal) {
 		if(artikal==null) {
-			throw new NullPointerException("Artikal ne sme da bude null");
+
+			throw new RuntimeException("Artikal ne sme da bude null");
+
 		}
 		listaArtikala.remove(artikal);
 	}
