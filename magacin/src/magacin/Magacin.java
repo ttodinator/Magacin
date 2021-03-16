@@ -1,25 +1,36 @@
 package magacin;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import magacin.interfejs.MagacinInterface;
 
 public class Magacin implements MagacinInterface{
 
+	List<Artikal> listaArtikala=new LinkedList<Artikal>();
 	@Override
 	public void dodajArtikal(Artikal artikal) {
-		// TODO Auto-generated method stub
-		
+		if(artikal==null) {
+			throw new NullPointerException("Artikal ne sme da bude null");
+		}
+		listaArtikala.add(artikal);
 	}
 
 	@Override
 	public void izbaciArtikal(Artikal artikal) {
-		// TODO Auto-generated method stub
-		
+		if(artikal==null) {
+			throw new NullPointerException("Artikal ne sme da bude null");
+		}
+		listaArtikala.remove(artikal);
 	}
 
 	@Override
-	public String vratiInformacije(int sifraArtikla) {
-		// TODO Auto-generated method stub
-		return null;
+	public void vratiInformacije(int sifraArtikla) {
+		for (int i = 0; i < listaArtikala.size(); i++) {
+			if(listaArtikala.get(i).getSifra() ==sifraArtikla) {
+				listaArtikala.get(i).toString();
+			}
+		}
 	}
 
 }
