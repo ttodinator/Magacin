@@ -8,6 +8,6 @@ public interface MagacinInterface {
 	
 	public void izbaciArtikal(Artikal artikal);
 	
-	public String vratiInformacije(int sifraArtikla);
+	public void vratiInformacije(int sifraArtikla);
 
 }

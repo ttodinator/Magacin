@@ -17,9 +17,9 @@ public class Magacin implements MagacinInterface{
 	}
 
 	@Override
-	public String vratiInformacije(int sifraArtikla) {
+	public void vratiInformacije(int sifraArtikla) {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 }
